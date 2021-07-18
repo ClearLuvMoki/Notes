@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>无序列表</h2>
+  <!-- 本节主要记录 ul(无序列表——unorderede list), ol（有序列表）, dl（定义列表） -->
+
+  <!-- 无序列表 -->
+  <!-- 不能单独出现ul， ul和li需要组合出现 -->
+  <!-- li也不能单独出现，只能放在 ol 或者 ul 中 -->
+  <!-- ul的子标签只能是 li 标签 -->
+  <!-- li 标签容器中可以放置其他任何标签 -->
+  <ul>
+    <!-- li(line item)，列表项 -->
+    <li>牛奶</li>
+    <li>水果</li>
+    <li>
+      咖啡
+      <p>黑咖啡</p>
+    </li>
+  </ul>
+  <!-- 列表的嵌套，例如： -->
+  <ul>
+    <li>
+      <h3>江苏省</h3>
+      <ul>
+        <li>南京</li>
+        <li>无锡</li>
+        <li>苏州</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- 无序列表的type属性，在H5中被废弃了 -->
+  <!-- type: 1.disc：默认值，实心圆；2.circle：空心圆；3.square：实心方块 -->
+  <ul type="disc">
+    <li>type为disc的实心圆</li>
+  </ul>
+
+  <ul type="circle">
+    <li>type为circle的空心圆</li>
+  </ul>
+
+  <ul type="square">
+    <li>type为square的实心方块</li>
+  </ul>
+  <hr/>
+
+  <!-- 有序列表ol(order list) -->
+  <!-- li标签也不能单独使用 -->
+  <!-- ol标签的子标签必须是li标签 -->
+  <!-- li标签可以放任何东西 -->
+  <h2>有序列表</h2>
+
+  <ol>
+    <li>小木</li>
+    <li>小明</li>
+  </ol>
+<!-- ol标签的type属性：1.a:小写a英文字母编号；2.A:大写A英文字母编号;3.小写i代表小写罗马数字编码;4.大写I代表大写罗马数字编号；5.1:数字1代表默认的数字编号 -->
+  <ol type="a">
+    <li>这是小英文字母编号</li>
+  </ol>
+  <ol type="A">
+    <li>这是大写文字母编号</li>
+  </ol>
+  <ol type="i">
+    <li>这是小写罗马数字编号</li>
+  </ol>
+  <ol type="I">
+    <li>这是大写罗马数字编号</li>
+  </ol>
+  <ol type="1">
+    <li>这是正常默认的编号</li>
+  </ol>
+
+  <!-- ol的start属性，表示了起始位置，必须是数字，无论type是什么类型 -->
+  <ol type="A" start="24">
+    <li>这是从第24个开始排列的</li>
+  </ol>
+
+
+  <!-- ol标签的reversed，指定列表项目是不是倒序，h5新增 -->
+  <!-- reversed最好不要和start一起使用 -->
+  <ol type="A" reversed>
+    <li>这是第一个</li>
+    <li>这是第二个</li>
+  </ol>
+<hr/>
+
+<h2>定义列表</h2>
+<!-- dl(definition list， 定义标签)， dt(definition term,数据项)， dd(data denifition, 数据定义) -->
+<!-- 在dl中dt和dd交替出现，存在于dl的子元素的同级别 -->
+
+
+</body>
+</html>
