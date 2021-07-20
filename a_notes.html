@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- 超级链接, a(anchor,锚)标签, href(hypertext reference,超文本引用)属性是 -->
+  <a href="img_other.html">点击跳转</a>
+
+  <!-- 页面内锚点 -->
+  <a href="#ceshi">测试锚点</a>
+  <!-- 也可以通过不同网页的锚点,比如 href=“src.html#maodian” -->
+
+  <!-- href支持相对路径和绝对路径,比如 -->
+
+  <a href="web/xxx/index.html">测试</a>
+  <a href="../web/xxx/index.html">测试</a>
+  <!-- 绝对路径 -->
+  <a href="https://www.baidu.com">测试</a>
+
+  <!-- a的title属性.鼠标在链接上的悬停文本 -->
+  <p>
+    <a href="#" title="悬停文本">鼠标悬停</a>
+  </p>
+
+  <!-- 在网页新窗口中打开, a标签的target属性设置成 blank, 在新标签中打开网页 -->
+  <p>
+    <a href="#" target="blank">新窗口打开网页</a>
+  </p>
+
+  <!-- 图片跳转网页 -->
+  <a href="https://www.baidu.com">
+    <img src="小慕医生网页demo/images/banner.png" alt="图片跳转">
+  </a>
+  <a href="https://www.baidu.com">
+    <img src="小慕医生网页demo/images/banner.png" alt="图片跳转">
+  </a>
+  <a href="https://www.baidu.com">
+    <img src="小慕医生网页demo/images/banner.png" alt="图片跳转">
+  </a>
+
+  <h2 id="ceshi">测试锚点</h2
+
+
+  <!-- 如果a标签的href指向了exe,zip,rar等文件格式链接,将成为下载链接 -->
+  <a href="a.exe">测试下载</a>
+
+  <!-- 如果a标签的 href 属性前面加上 mailto:，那么后面加上邮箱会自动打开Email相关软件 -->
+  <a href="mailto: 2893096286@qq.com">测试打开email</a>
+
+  <!-- 如果是 tel：前缀的话，那么会自动打开拨号盘 -->
+  <a href="tel: 2893096286">测试打开拨号盘</a>
+
+
+
+</body>
+</html>

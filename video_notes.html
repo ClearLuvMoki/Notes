@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- html插入音频 -->
+  <!-- 使用 audio 标签， controls属性表示现实播放控件， src 播放地址， audio标签中间的文字是当不支持播放的时候显示的文字 -->
+  <!-- 常用音频格式 mp3 和 ogg -->
+  <audio src="播放路径" controls>播放文件</audio>
+  <!-- audio的 autoplay属性，常用浏览器可能是不允许自动播放 -->
+  <!-- audio的 loop 属性，循环播放 -->
+  <audio src="播放路径" controls loop autoplay>循环和自动播放文件</audio>
+
+
+  <!-- html插入视频 -->
+  <!-- 使用 video 标签， controls属性表示现实播放控件， src 播放地址， audio标签中间的文字是当不支持播放的时候显示的文字 -->
+
+  <!-- 常用格式 mp4 和 ogv, webm  -->
+  <!-- 还有 width 属性 -->
+  <video src="播放路径" controls loop autoplay></video>
+
+
+  <!-- video 标签和 audio 标签都支持 source 子标签，该标签中可以提供给浏览器选择自己支持的播放媒体类型 -->
+  <!-- source是单标签 -->
+  <audio controls>
+      <source src="播放路径" type="audio/mp3">
+      <source src="播放路径" type="audio/ogg">
+      <source src="播放路径" type="audio/wav">
+      抱歉您的浏览器不支持audio标签
+  </audio>
+
+  <video controls>
+      <source src="播放路径" type="audio/mp4">
+      <source src="播放路径" type="audio/ogv">
+      <source src="播放路径" type="audio/avi">
+      抱歉您的浏览器不支持video标签
+  </video>
+
+</body>
+</html>
