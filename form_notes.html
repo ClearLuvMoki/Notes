@@ -11,10 +11,112 @@
   <!-- 表单的创建， form -->
   <!-- 1. action 属性表示表单提交到后端的地址 -->
   <!-- 2. method 表单的提交方式， get， post -->
-  <form action="" method="post"></form>
+  <form action="" method="post">
 
-  <!-- 基本控件， 单行文本框， input是一个单标签 -->
-  <!-- type： input的类型, value： 表示已经写好的值， placeholder:提示文本 -->
+  <!-- 基本控件， 单行文本框， input是一个单标签, type: text -->
+  <!-- type： input的类型, value： 表示已经写好的值， placeholder:提示文本， disabled： 表示不能操作该元素 -->
+  <input type="text" placeholder="请输入" >
+  <input type="text" value="江南大学" placeholder="请输入">
+  <input type="text" placeholder="disabled不能输入"  disabled>
+
+  <!-- 单选按钮， input 的 type: radio, value: 向服务器提交的值（必有）, checked： 默认选中， name相同表示一组互斥（相同name只能选择一个） -->
+  <input type="radio" name="man" value="man"> 男
+  <input type="radio" name="man" value="woman" checked> 女
+
+  <!-- 使用label标签，我们点击单选的文字也能选中， 在h4中是通过lable中的for属性与input（type= radio）的id属性值进行绑定, 在h5中不需要for属性 -->
+  <!-- 我们使用h4规范， 只需要把包裹起来不需要包裹input标签，但是需要for属性和id属性匹配 -->
+  <input type="radio" id="man"> <label for="man">h4的label</label>
+  <!-- 这是h5的规范，不需要for属性和id属性，但是需要包裹 -->
+    <label >
+      <input type="radio" > h5的label
+    </label>
+
+
+
+    <!-- 复选框，同一组的 name 属性值应该相同，其他与radio基本一致 -->
+    <p>
+      <label>
+        <input type="checkbox" name="play"> 足球
+      </label>
+      <label>
+        <input type="checkbox" name="play"> 篮球
+      </label>
+      <label>
+        <input type="checkbox" name="play"> 游泳
+      </label>
+    </p>
+
+
+    <!-- 密码框， type： password -->
+    <p>
+      请输入密码
+      <input type="password" name="pwd">
+    </p>
+
+    <!-- 下拉菜单，select， option是内部选项 -->
+    <!-- 默认选中选项，给options对应的添加 selected 属性 -->
+    <select name="select" >
+        <option value="1">选项1</option>
+        <option value="2" selected>选项2</option>
+        <option value="3">选项3</option>
+    </select>
+
+    <!-- 多行文本框， textarea, rows定义文本框行数, cols定义文本框的列数 -->
+    <p>
+      <textarea name="name" rows="10" cols="50" ></textarea>
+    </p>
+
+
+    <!-- 三种按钮 -->
+    <!-- input, type: button表示普通按钮(可以简写成<button></button>)， type：submit表示提交按钮， type： reset表示重置按钮 -->
+    <!-- 在同一个form里面生效,value表示按钮的文本 -->
+    <button>普通按钮</button>
+    <input type="button" value="我是一个普通按钮">
+    <input type="submit" value="提交按钮">
+    <input type="reset" value="重置表单">
+</form>
+
+
+  <!-- h5中新增input种类 -->
+  <!-- input的type种类变多 -->
+  <!-- 1. color，颜色选择控件 -->
+  <form action="">
+    <input type="color">
+    <!-- 2. date， time，日期时间选择控件 -->
+    <input type="date">
+    <input type="time">
+    <!-- 3. email 电子邮件选择控件，在表单中点击提交会进行校验 -->
+    <!-- required 属性可以设置在提交时候校验必填选项 -->
+    <input type="email">
+    <!-- 4. file 文件选择控件 -->
+    <input type="file">
+    <!-- 5. number 数字输入控件， min和max是可以选择输入的最小和最大位数，在提交时候校验 -->
+    <input type="number" max="10" min="5">
+    <!-- 6. range 拖拽条， min和max是可以选择输入的最小和最大位数，表示了拖拽条的范围 -->
+    <input type="range" max="10" min="5">
+    <!-- 7. search 搜索框 -->
+    <input type="search">
+    <!-- 8. url 网址输入控件 -->
+    <input type="url">
+    <input type="submit" value="提交">
+  </form>
+
+
+
+  <!-- datalist控件，当用户输入与datalist中内容相同时候可以智能感应 -->
+  <!-- input, type: text lists属性可以与id相同的dataList相匹配 -->
+  <!-- 在datalist中option是单标签 -->
+  <p>
+    输入省份：
+    <input type="text" list="proList">
+    <datalist id="proList">
+      <option value="山东">
+      <option value="四川">
+      <option value="山西">
+      <option value="陕西">
+    </datalist>
+  </p>
+
 
 </body>
 </html>
