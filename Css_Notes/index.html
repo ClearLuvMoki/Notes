@@ -1,0 +1,33 @@
+
+
+  <!-- Css(cascading style sheet) 层叠样式表， 给 html 添加样式的语言 -->
+  <!-- C3 是最新版本，增加了大量的动画，特效，以及移动端特性 -->
+  <!-- HTML 结构层，CSS 样式层，Js行为层， CSS使样式和结构分离 -->
+
+  <!-- CSS的书写位置 -->
+
+  <!-- 1.内嵌式，在<head></head>标签中写<style></style> -->
+  <!-- 内嵌 -->
+  <style>
+
+  </style>
+
+  <!-- 2.外链式，将css单独保存为.CSS结尾的文件，然后在html中通过link标签引入, rel 属性告诉是之间的关系（stylesheet）, href 是路径和文件名字 -->
+  <!-- link标签写在<head></head>标签中 -->
+  <head>
+    ...
+    <link rel="stylesheet" href="index.css">
+    ...
+  </head>
+
+  <!-- 3.导入式，写在import中 -->
+  <!-- 一般不使用导入式，使用导入式不会等到样式文件加载完成，而是直接渲染 HTML，就会导致页面可能出现样式错乱或者没有样式的时间 -->
+  <!-- link的加载顺序： 加载页面时，link标签引入的 CSS 被同时加载；@import引入的 CSS 将在页面加载完毕后被加载。 -->
+  <!-- 兼容性：  @import是 CSS2.1 才有的语法，故只可在 IE5+ 才能识别；link标签作为 HTML 元素，不存在兼容性问题。 -->
+  <style>
+    /* 必须又一个分号 */
+    @import url(index.css);
+  </style>
+
+  <!-- 4.行内式， 样式直接写在标签内部的style属性上面，只能给一个标签设置 -->
+  <h1 style="color: red;">标题</h1>

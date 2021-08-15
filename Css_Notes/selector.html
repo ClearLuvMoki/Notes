@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- 1.标签选择器 -->
+  <!-- 选择页面上所有该种标签，直接使用元素的标签名当作选择器,覆盖面大，无论标签的深浅，通常用于标签的初始化 -->
+  <style type="text/css">
+      span {
+        color: red
+      }
+      a {
+        text-decoration: none
+      }
+      ul {
+        list-style: none;
+      }
+  </style>
+
+  <!-- 2. id选择器 -->
+  <!-- 标签的唯一标识，只能是字母，数字，下划线，短横构成，同一页面不能有相同id标签，并且不能以数字开头 -->
+  <!-- id选择器以 # 号前缀 -->
+  <style type="text/css">
+    #para {
+      color: green;
+    }
+  </style>
+  <!-- 3.class选择器 -->
+  <!-- class属性表示类名，命名规范和id选择器一样，前缀使用  .  -->
+  <!-- class标签可以重复，同一页面可以存在多个 -->
+  <!-- 同一个标签可以属于多个类，中间使用空格隔开 -->
+  <style type="text/css">
+    .warn {
+      color: blue;
+    }
+    .font {
+      font-style: italic;
+    }
+  </style>
+  <!-- 4.原子类 -->
+  <!-- 在我们使用中可以把常用的样式添加出来 -->
+  <style type="text/css">
+    .fs12 {
+      font-size: 12px;
+    }
+    .fs14 {
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!--  多个类名隔开 -->
+  <!-- 如果在多个类名存在样式冲突，在style中相同属性的样式，在后面的会覆盖前面的 -->
+  <span class="warn font">test</span>
+</body>
+</html>
