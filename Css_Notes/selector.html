@@ -1,61 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-  <!-- 1.标签选择器 -->
-  <!-- 选择页面上所有该种标签，直接使用元素的标签名当作选择器,覆盖面大，无论标签的深浅，通常用于标签的初始化 -->
-  <style type="text/css">
-      span {
-        color: red
-      }
-      a {
-        text-decoration: none
-      }
-      ul {
-        list-style: none;
-      }
-  </style>
+    <!-- 1.标签选择器 -->
+        <!-- 选择页面上所有该种标签，直接使用元素的标签名当作选择器,覆盖面大，无论标签的深浅，通常用于标签的初始化 -->
+        <style type="text/css">
+            span {
+                /* color: red */
+            }
 
-  <!-- 2. id选择器 -->
-  <!-- 标签的唯一标识，只能是字母，数字，下划线，短横构成，同一页面不能有相同id标签，并且不能以数字开头 -->
-  <!-- id选择器以 # 号前缀 -->
-  <style type="text/css">
-    #para {
-      color: green;
-    }
-  </style>
-  <!-- 3.class选择器 -->
-  <!-- class属性表示类名，命名规范和id选择器一样，前缀使用  .  -->
-  <!-- class标签可以重复，同一页面可以存在多个 -->
-  <!-- 同一个标签可以属于多个类，中间使用空格隔开 -->
-  <style type="text/css">
-    .warn {
-      color: blue;
-    }
-    .font {
-      font-style: italic;
-    }
-  </style>
-  <!-- 4.原子类 -->
-  <!-- 在我们使用中可以把常用的样式添加出来 -->
-  <style type="text/css">
-    .fs12 {
-      font-size: 12px;
-    }
-    .fs14 {
-      font-size: 14px;
-    }
-  </style>
+            a {
+                text-decoration: none
+            }
+
+            ul {
+                list-style: none;
+            }
+        </style>
+
+    <!-- 2. id选择器 -->
+        <!-- 标签的唯一标识，只能是字母，数字，下划线，短横构成，同一页面不能有相同id标签，并且不能以数字开头 -->
+        <!-- id选择器以 # 号前缀 -->
+        <style type="text/css">
+            #para {
+                color: green;
+            }
+        </style>
+    <!-- 3.class选择器 -->
+        <!-- class属性表示类名，命名规范和id选择器一样，前缀使用  .  -->
+        <!-- class标签可以重复，同一页面可以存在多个 -->
+        <!-- 同一个标签可以属于多个类，中间使用空格隔开 -->
+        <style type="text/css">
+            .warn {
+                color: blue;
+            }
+
+            .font {
+                font-style: italic;
+            }
+        </style>
+
+    <!-- 4.原子类 -->
+        <!-- 在我们使用中可以把常用的样式添加出来 -->
+        <style type="text/css">
+            .fs12 {
+                font-size: 12px;
+            }
+
+            .fs14 {
+                font-size: 14px;
+            }
+        </style>
+
+    <!-- 5.复合选择器 -->
+        <!-- a.后代选择器, 例子： .box .spec 选择类名为box标签内部为spec的类标签,中间是空格 -->
+        <!-- 后代选择器不一定是子元素！！ -->
+        <!-- 后代选择器中间允许出现多个空格隔开好几代。例如： .box ul li .spec em,之力并不是所有的元素改变，只是定位到最后一个选择器的样式改变  -->
+        <!-- 并且样式会改变最后一个选择器的所有后代中 -->
+        <style type="text/css">
+            .box p {
+                color: green;
+            }
+
+            .bos em li spec {
+                color: blue;
+            }
+        </style>
+        <!-- b.交集选择器, 选择既有。。。 又有。。。的标签 例子：h3.spec，选择h3标签和class属性为spec的选择器,中间没有空格  -->
+        <style type="text/css">
+            h3.spec {
+                color: red;
+            }
+        </style>
+        <!-- c.并集选择器, 同时选择多个选择器，使用逗号， 例子： ul,ol-->
+        <style type="text/css">
+            ul,ol {
+                list-style: none;
+            }
+        </style>
+        <!-- d.复合选择器 -->
+        <!-- 例子： 即时div标签又是class属性为box的标签 后代的 li标签 后代的 即是p标签又是class属性为spec的标签  后代的 em标签-->
+        <style type="text/css">
+            div.box li p.spec em {
+                color: green;
+            }
+        </style>
 
 </head>
+
 <body>
 
-  <!--  多个类名隔开 -->
-  <!-- 如果在多个类名存在样式冲突，在style中相同属性的样式，在后面的会覆盖前面的 -->
-  <span class="warn font">test</span>
+    <!--  多个类名隔开 -->
+    <!-- 如果在多个类名存在样式冲突，在style中相同属性的样式，在后面的会覆盖前面的 -->
+    <span class="warn font">test</span>
+
+    <!-- 5 -->
+    <div class="box">
+        test
+        <p>
+            11111
+            <em>em的世态
+                <span>4444</span>
+            </em>
+            3333
+        </p>
+    </div>
 </body>
+
 </html>

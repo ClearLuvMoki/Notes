@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素关系选择器</title>
+
+    <!-- 1，子选择器，例子： div > p， div子标签p -->
+    <!-- 使用 > 只会匹配作为 > 前的元素的直接后代，两个标签为父子关系 -->
+    <style type="text/css">
+        div>em {
+            color: red;
+        }
+    </style>
+
+    <!-- 1，相邻兄弟选择器, 例子， img + p， img后面的段落被选中 -->
+    <!-- 相邻兄弟元素选择的是第二个元素紧跟在第一个元素后面，并且两个元素都属于同一个父级元素，相邻兄弟元素只会选择第二个元素，不会选择第一个元素 -->
+    <style type="text/css">
+        img+span {
+            color: green;
+        }
+    </style>
+
+    <!-- 1，通用兄弟选择器 ，例子， p～span， p之后的所有同层级span标签-->
+    <!-- 通用兄弟选择器是选择器， a～b， 是选择a之后所有同层级的b元素,跟相邻兄弟元素一样不会选择本身，只会选择之后的元素 -->
+    <style type="text/css">
+        span~em {
+            color: red;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="box">
+        <em>22</em>
+    </div>
+
+    <div>
+        <img src="" alt="">
+        <span>111</span>
+        <span>222</span>
+    </div>
+
+
+    <div>
+
+        <span>222</span>
+        <em>44</em>
+        <em>55</em>
+        <em>66</em>
+        <em>77</em>
+    </div>
+
+</body>
+
+</html>

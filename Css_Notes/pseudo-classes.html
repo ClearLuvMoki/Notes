@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类</title>
+    <!-- 伪类是添加到选择器中的描述性词语，指定要选择的元素特殊状态 -->
+    <!-- a标签的准则 --- 爱恨准则 LOVE HATE ， link -> visited -> hover -> active -->
+    <!-- 1.link,没有被访问的超级链接 -->
+    <!-- 2.visted， 已经被访问的超级链接 -->
+    <!-- 3.hover， 鼠标悬停的超级链接 -->
+    <style type="text/css">
+        a:link {
+            color: red;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: yellow;
+        }
+        a:active {
+            color: black;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <a href="#">链接</a>
+    <a href="#">链接2</a>
+</body>
+</html>
