@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>序号选择器</title>
+
+    <!-- 1.:first-child 第一个字元素 -->
+    <!-- 必须在 first-child之前写上标签！ -->
+    <style type="text/css">
+        .box p:first-child {
+            color: red;
+        }
+    </style>
+
+    <!-- 2.:last-child， 最后一个子元素 -->
+    <style type="text/css">
+        .box p:last-child {
+            color: rgb(43, 22, 22);
+        }
+    </style>
+
+    <!-- 3. :nth-child(n) 第n个子元素 -->
+    <!-- n支持 an+b 的写法，但是不能写成 b + an，表示从b开始，每a个选择一个， 例子： 3n+2， 表示从第二个开始，每三个选择一个 -->
+    <!-- 2n+1， 等价于 odd， 表示奇数 -->
+    <!-- 2n， 等价于 even 表示偶数 -->
+    <!-- ⚠️： 如果第 n 个元素不存在该标签，例如第三个元素不存在p标签而是div标签，那么样式不会生效，并且也不会向后查找 ！！！ -->
+    <style type="text/css">
+        .box p:nth-child(3) {
+            color: rgb(43, 22, 22);
+        }
+    </style>
+
+
+    <!-- 4. :nth-of-type(n),第n个某种类型的子元素 -->
+    <!-- 选择同种标签指定序号的标签 -->
+    <!-- 这个选择元素很好解决了上述的当第n个元素不存在的时候，只会在同层级的同种元素中寻找 -->
+    <style type="text/css">
+        .box p:nth-of-type(3) {
+            color: rgb(43, 22, 22);
+        }
+    </style>
+
+
+
+    <!-- 如下两个一样，只是是倒数选择 -->
+    <!-- 5. :nth-last-child(n), 到处第(n)个子元素 -->
+    <!-- 5. :nth-last-of-type(n), 到处第(n)哥某类型的子元素 -->
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
