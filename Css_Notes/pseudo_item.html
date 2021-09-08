@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>伪元素</title>
+
+  <!-- after和before表示的是在标签内部添加的，不是标签之前！ -->
+  <!-- 1.::before 创建一个伪元素，成为匹配选中的元素的第一个子元素！！，必须设置content属性！！ -->
+  <style media="screen" type="text/css">
+  a::before {
+    content:"⭐️"
+  }
+  </style>
+
+  <!-- 2.::after 创建一个伪元素，成为匹配选中的元素的最后一个子元素！！，必须设置content属性！！ -->
+  <style media="screen" type="text/css">
+    a::after {
+      content:"💗"
+    }
+  </style>
+
+  <!-- 3.::selection,用于文档中被用户高亮的部分，使用鼠标圈选中的部分, cltr + A 的类似选中-->
+  <style media="screen" type="text/css">
+  .box::selection {
+    background-color: blue;
+  }
+  </style>
+
+
+<!-- 4.::first-letter, 会选中块级元素中的第一行的第一个字母 -->
+<style media="screen" type="text/css">
+  p::first-letter {
+    font-size: 30px;
+  }
+</style>
+
+
+<!-- 4.::first-line, 会选中块级元素中的第一行全部文字 -->
+<style media="screen" type="text/css">
+  p::first-line {
+    color: blue;
+  }
+</style>
+</head>
+<body>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+
+  <div class="box">
+    222222
+  </div>
+  <p>111111</p>
+</body>
+</html>

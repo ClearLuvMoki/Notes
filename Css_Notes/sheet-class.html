@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Css的层叠性</title>
+
+  <!-- 层叠性的冲突， id选择器 > class选择器 > 标签选择器 -->
+  <style media="screen" type="text/css">
+    #name {
+      color: red;
+    }
+
+    .box {
+      color: green;
+    }
+
+    span {
+      color: blue;
+    }
+  </style>
+
+
+  <!-- 复杂的选择器，通过id个数，class个数，标签个数来计算样式 -->
+  <!-- 准确的说权重计算是四位，分别代表了 1.行内样式 2.id选择器 3.class选择器 4.标签选择器  -->
+  <style media="screen" type="text/css">
+    /* 这里的权重是（2，0，1） */
+    #box #box2 p {}
+    /* 这里的权重是（1，1，2） */
+    #box span.name p {}
+    /* 这里的权重是（0，3，1） */
+    .box .box1 .box2 p {}
+  </style>
+
+  <!-- !important提升权重，写在分号前面 -->
+
+</head>
+<body>
+
+</body>
+</html>

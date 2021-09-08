@@ -25,11 +25,60 @@
             font-size: 50px;
         }
     </style>
+
+    <!-- css3新增伪类 -->
+    <style media="screen" type="text/css">
+      p {
+        width: 100px;
+        height: 100px;
+        border: solid 1px black;
+        padding: 10px;
+      }
+      /* 1.空标签， 具有空格和换行不算空标签 */
+      p:empty {
+        background: red;
+      }
+
+      /* 2.输入框聚焦 */
+      input:focus {
+        background-color: red;
+      }
+
+      /* 3.输入框不可输入 */
+      input:disabled {
+        background-color: black;
+      }
+
+      /* 4.checkbox/radio 选中 */
+      input:checked+span {
+        color: blue;
+      }
+
+      /* 5.根元素 */
+      /* 等价于 html {} */
+      :root {
+      }
+
+    </style>
 </head>
 
 
 <body>
     <a href="#">链接</a>
     <a href="#">链接2</a>
+
+    <p></p>
+    <p>12</p>
+
+    <div>
+      <input type="text" name="" value="">
+      <input type="text" name="" value="">
+      <input type="text" name="" value="" disabled>
+    </div>
+
+    <div>
+      <input type="checkbox" name="" value=""> <span>文字</span>
+      <input type="radio" name="" value=""> <span>单选</span>
+    </div>
 </body>
 </html>
