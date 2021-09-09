@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+
+
+    <!-- 如果我们给盒子添加了box-sizing: border-box 属性， 那么该属性就表示盒子的 width 和 height 表示的盒子实际的宽高（不包含 margin），padding 和 border向内缩， 不再外扩  -->
+    <style type="text/css">
+        /* 在这个例子中，内容的高度和宽度为 100 - 20 - 20 = 60 */
+        .box {
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            border: 10px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">内容</div>
+</body>
+
+</html>

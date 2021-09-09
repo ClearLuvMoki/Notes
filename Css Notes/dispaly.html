@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dispaly（显示）</title>
+
+    <!-- 1.行内元素，能并排显示，但是不能设置宽高和 margin，width自动收缩， 例如： a, span, em, b, u , i等，但是可以设置 padding -->
+    <!-- 行内元素核心是内容，设置 padding 不会影响到内容的位置，会自动向外部扩张 -->
+    <style type="text/css">
+        span {
+            padding: 20px;
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            margin-top: 200px;
+        }
+    </style>
+
+    <!-- 2.行内块，能够设置宽高，也可以并排显示， 比如： img， input 标签 -->
+
+    <!-- 3.块级元素，不能并排显示， 但是可以设置宽高， width自动撑满， 比如： div， p， ul， li，section等 -->
+
+
+    <!-- 4.行内元素和块级元素相互转换 -->
+    <style type="text/css">
+        /* 转换成块级元素 */
+        .span1 {
+            display: block;
+        }
+
+        /* 转换成行内元素 */
+        .div1 {
+            display: inline;
+        }
+
+        /* 转换成行内块级元素 */
+        .inline_block {
+            display: inline-block;
+        }
+    </style>
+
+
+    <!-- 5.元素的隐藏 -->
+    <style type="text/css">
+        /* 设置为display： none；可以隐藏元素，元素彻底放弃dom位置 */
+        .box1 {
+            display: none;
+        }
+
+        /* 设置 visibility: hidden 隐藏元素，但是不会隐藏dom */
+        .box2 {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <span>无效设置宽高</span>
+
+    <span class="span1">内容</span>
+</body>
+
+</html>

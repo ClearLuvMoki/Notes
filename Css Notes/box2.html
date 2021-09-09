@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型的计算</title>
+
+    <!-- 当我们使用 border ，padding,那么盒子的宽高都要加上两者*2（代表的是左右padding和左右的border）的值 -->
+    <!-- 🌟 当一个盒子作为父元素，那么更重要的是 width 和 height，因为只有这里面的值才是留给子元素的空间 -->
+    <!-- 如果子元素超出了那么就会超出父元素 -->
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 父元素 */
+        /* 父元素的内容宽度为 400px */
+        .contenter {
+            width: 400px;
+            height: 300px;
+            padding: 10px;
+            border: 6px solid red;
+            background-color: brown;
+        }
+
+        /* 孩子的总宽度为 388 + 12 === 400 */
+        .child {
+            width: 388px;
+            height: 188px;
+            border: 6px solid blue;
+            background-color: burlywood;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenter">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
