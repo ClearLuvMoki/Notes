@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+
+    <!-- 1.text-indent, 首行缩进 -->
+    <style type="text/css">
+        /* 首行缩进两个字符 */
+        .box {
+            text-indent: 2rem;
+        }
+    </style>
+
+    <!-- 2.line-height， 行高，文字在这一行的高度，文字位于中间，上下都具有空隙 -->
+    <!-- 一般不写单位使用倍数或者使用百分数，1.25 -->
+    <style type="text/css">
+        /* 一般也会使用px作为单位 */
+        .box {
+            line-height: 30px;
+        }
+
+        /* 书写百分数和倍数必须确定字体的font-size， 百分数和倍数都是相对于font-size确定的 */
+        /* 不写单位表示字体大小的 1.5 倍 */
+        .box2 {
+            line-height: 1.5;
+        }
+
+        /* 设置成百分数也是字体大小的倍数 */
+        .box2 {
+            line-height: 30%;
+        }
+    </style>
+
+    <!-- ！！！单行文本垂直居中，设置行高和盒子一样高，即可实现 单行文本！！垂直居中 -->
+    <!-- 3.text-align： center； 可设置文字水平居中 -->
+    <style type="text/css">
+        .box {
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+
+
+    <!-- 5.font属性合写 -->
+    <!-- 单写font可以合并， font-style， font-weight, font-size, line-height, font-family -->
+    <style type="text/css">
+        /* 格式： 倾斜 加粗 字体大小/行高 字体样式 */
+        .box {
+            font: italic bold 30px/1.5 'Times New Roman'
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p class="box" style="height: 100px; border: 1px solid black;">文字</p>
+</body>
+
+</html>

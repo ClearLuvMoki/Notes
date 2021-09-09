@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+
+    <!-- margin 是盒子的外边距，盒子与盒子的距离 -->
+    <!-- margin 也存在四个方向 -->
+    <style type="text/css">
+        .box {
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+    </style>
+
+    <!-- 垂直方向存在 margin 塌陷，小的 margin 会塌陷到大的 margin 中，margin 不叠加， 只是以大的值为准 -->
+    <!-- 下面的例子中最终的两者的 margin 为40px， 但是左右不存在 margin 塌陷现象 -->
+    <style type="text/css">
+        .box1 {
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+
+        .box2 {
+            border: 1px solid black;
+            margin-top: 50px;
+        }
+
+        .span1 {
+            margin-right: 30px;
+        }
+
+        .span2 {
+            margin-left: 20px;
+        }
+    </style>
+
+    <!-- 一些元素存在默认的 margin，在开始之前最好清除，比如 body， p， ul -->
+    <!-- * {} 表示通配符选择器，选择所有标签 -->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 或者 */
+        body,
+        ul,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+
+    <!-- 盒子的水平居中 -->
+    <!-- 将盒子的左右 margin 设置为 auto，盒子水平居中 -->
+    <!-- 文本居中 text-align: center,是两个概念 -->
+    <style type="text/css">
+        .box3 {
+            background-color: red;
+            /* 设置为上下 margin 20px 左右居中 */
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 2000%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span class="span1">span1</span>
+    <span class="span2">span2</span>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+
+    <section class="box3">内容</section>
+</body>
+
+</html>

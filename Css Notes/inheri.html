@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承性</title>
+
+    <!-- 继承性多是文本相关的属性 -->
+    <!-- 只要是给祖先标签设置了样式，后代所有标签生效，通常给body设置样式当作网页的通用设置 -->
+
+    <!-- 1.color -->
+    <!-- 2.font开头的 -->
+    <!-- 3.line开头的 -->
+    <!-- 4.text开头的 -->
+    <!-- 5.list开头的 -->
+
+    <!-- 在继承情况下，选择器的权重计算失效，就近原则 ，并且选择器没有直接选择到需要修改的标签上！！例子： -->
+    <style type="text/css">
+        /* 如果选择器没有直接选择到需要修改的标签，那么权重失效，就近原则生效 */
+        /* 下面第一组和第二组比，都没有直接选择到p元素，但是第二组离p元素更近所有颜色生效 */
+        /* 第一组和第三组比，第三组直接选择到了p元素，name第三组生效 */
+        #box #box1 {
+            color: red;
+        }
+
+        .box2 .box3 {
+            color: blue;
+        }
+
+        p {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box" class="box1">
+        <div id="box1" class="box2">
+            <div id="box2" class="box3">
+                <p>文字</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
