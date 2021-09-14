@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+
+    <!-- 浮动的标签要在封闭的盒子（bfc）中，要不然会影响后续元素 -->
+    <style type="text/css">
+        /* 1.清除浮动，让父元素成为bfc */
+        .box {
+            overflow: hidden;
+        }
+
+        /* 2.给后面的父元素的设置 clear： both， 清除后面父元素的左右浮动,both表示清除左右 */
+        /* margin失效 */
+        .box2 {
+            clear: both;
+        }
+
+        /* 3.清除浮动，使用::after给盒子添加一个最后一个子元素，并且给::after设置 clear：both */
+        /* 注意必须转成块级元素 */
+        .clearfix::after {
+            content: '';
+            /* 必须转换成块级元素 */
+            display: block;
+            clear: both;
+        }
+
+        /* 4.在两个父元素之间携带一个盒子，带有 clear：both */
+        .box2 {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

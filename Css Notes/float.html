@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+
+
+    <!-- a.浮动的基本功能就是并排  -->
+    <!-- 1.设置浮动，并排的都要设置浮动 -->
+    <!-- 2.要设置足够的宽度，否则子元素会掉下去 -->
+    <style type="text/css">
+        .box {
+            width: 600px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .box>div {
+            width: 200px;
+            height: 200px;
+        }
+
+
+        .box>div:nth-child(1) {
+            background-color: green;
+            float: left;
+        }
+
+        .box>div:nth-child(2) {
+            background-color: red;
+            float: left;
+        }
+
+        .box>div:nth-child(3) {
+            background-color: blue;
+            float: left;
+        }
+
+        /* b.浮动的贴靠性 */
+        /* 当子元素超出了父元素的宽度，那么会向前寻找可以在父元素内部贴靠的前面的子元素，会在寻找前面的子元素，如果前面都没有可以贴靠的，那么就贴着父元素的边 */
+        /* 如下这个例子当第三个子元素超过了父元素的宽度，那么无法贴靠前面子元素，那么继续向前寻找贴靠在第一个子元素 */
+        .pa {
+            width: 400px;
+            height: 700px;
+            border: 10px solid black;
+            padding: 20px;
+        }
+
+        .pa_child1 {
+            width: 300px;
+            height: 500px;
+            background-color: green;
+            float: left;
+        }
+
+        .pa_child2 {
+            width: 100px;
+            height: 250px;
+            background-color: grey;
+            float: left;
+        }
+
+        .pa_child3 {
+            width: 100px;
+            height: 250px;
+            background-color: hotpink;
+            float: left;
+        }
+
+        /*  c.浮动的元素一定可以设置宽高,不再区分块级和行内元素 ，即使是span和a标签 */
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-left: 10px;
+            float: left;
+        }
+
+        /* d.右浮动，靠右排序是按照顺序反着来的，第一个最先靠着右边 */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+    </div> -->
+
+    <div class="pa">
+        <div class="pa_child1"></div>
+        <div class="pa_child2"></div>
+        <div class="pa_child3"></div>
+    </div>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+
+</body>
+
+</html>

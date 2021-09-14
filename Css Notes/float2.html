@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float网页布局</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        header .logo {
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: rgb(252, 248, 7);
+        }
+
+        header .logoin {
+            float: right;
+            width: 200px;
+            height: 30px;
+            background-color: rgb(252, 248, 7);
+        }
+
+        nav {
+            float: right;
+            width: 700px;
+            height: 50px;
+            background-color: cadetblue;
+            margin-top: 20px;
+        }
+
+
+        .content {
+            width: 1000px;
+            height: 600px;
+            margin: 20px auto;
+        }
+
+        aside {
+            float: left;
+            width: 300px;
+            height: 600px;
+            background-color: chocolate;
+        }
+
+        main {
+            float: right;
+            width: 600px;
+            height: 600px;
+        }
+
+        footer {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #333;
+        }
+
+        .content .banner {
+            width: 600px;
+            height: 400px;
+            background-color: rosybrown;
+        }
+
+        .content .pic {
+            width: 600px;
+            height: 150px;
+            margin-top: 50px;
+            background-color: rosybrown;
+        }
+
+        .content .pic ul {
+            list-style: none;
+        }
+
+        .content .pic ul li {
+            float: left;
+            margin-left: 10px;
+            width: 100px;
+            height: 150px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="logoin"></div>
+        <nav></nav>
+    </header>
+    </header>
+    <section class="content">
+        <aside></aside>
+        <main>
+            <div class="banner"></div>
+            <div class="pic">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </main>
+    </section>
+    <footer></footer>
+</body>
+
+</html>

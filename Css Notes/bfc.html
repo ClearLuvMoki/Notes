@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC</title>
+
+
+    <!-- BFC 块级格式化上下文，容器里面的元素不会影响到外面，反之亦然 -->
+    <style type="text/css">
+        /* 创建bfc */
+        /* 1. float的值不是none */
+        /* 2.position的值 不是static或者relative */
+        /* 3.dispaly的值是inline-block或者是flex 或者inline-flex */
+        /* 4.overflow： hidden */
+        .box {
+            width: 400px;
+            border: black 10px solid;
+            /* 1.设置父级float，就可以子元素撑起 */
+            /* float: right; */
+
+            /* 2.设置成行内元素 */
+            /* display: inline-block; */
+
+            /* 3.overflow： hidden，溢出隐藏，设置该属性值可以形成 bfc！！ */
+            /* 这属性只能隐藏超过边框的 */
+            overflow: hidden;
+        }
+
+        .box .c1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: saddlebrown;
+        }
+
+        .box .c2 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /* bfc的其他作用 */
+        /* 1.取消 margin 塌陷 */
+        /* 2.阻止元素浮动覆盖 */
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="c1"></div>
+        <div class="c2"></div>
+    </div>
+</body>
+
+</html>
